@@ -208,6 +208,20 @@ main {
 .image-slider {
   margin: 16px 0;
 }
+.jobdesc {
+  font-style: italic;
+  color: #555;
+  font-weight: bold;
+}
+.name {
+  font-size: 18px;
+  // font-weight: bold;
+}
+.credit {
+  padding: 32px 0;
+  background: white;
+  border-top: 2px dashed #444;
+}
 
 section {
   position: relative;

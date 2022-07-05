@@ -14,7 +14,7 @@ main {
 .title {
   &-h1 {
     // transform: skewY(-3deg);
-    text-shadow: #bfbaff 4px 4px, #ffdef7 2px 2px;
+    text-shadow: #bfbaff 2px 2px, #ffdef7 2px 2px;
     // text-shadow: red 4px 4px yellow 8px 8px;
     color: chocolate;
     font-size: 60px;
@@ -87,6 +87,19 @@ main {
 
 .irianjaya {
   background-image: url("../img/download.png");
+  background-size: cover;
+  min-height: 100vh;
+  padding: 150px 0;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  // background-size: cover;
+  z-index: 999;
+  position: relative;
+}
+
+.irianjaya1 {
+  background-image: url("../img/download1.png");
   background-size: cover;
   min-height: 100vh;
   padding: 150px 0;

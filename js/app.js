@@ -2,7 +2,7 @@
 
 $(window).scroll(function () {
   var scroll = $(window).scrollTop();
-  // console.log(scroll > 10);
+  // console.log(scroll);
 
   var header = $("header");
 
@@ -22,6 +22,7 @@ $(window).scroll(function () {
 // });
 
 $(() => {
+  new WOW().init();
   var mobile = $(".menu").addClass("mob");
   $(document).on("click", ".m-menu", () => {
     $(".menu").fadeIn("fast");

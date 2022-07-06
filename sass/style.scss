@@ -208,6 +208,11 @@ main {
 .image-slider {
   margin: 16px 0;
 }
+
+.bottom-10 {
+  margin-bottom: 800px;
+}
+
 .jobdesc {
   font-style: italic;
   color: #555;
@@ -229,7 +234,10 @@ section {
   overflow-x: hidden;
   .bg-map {
     position: absolute;
-    inset: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     z-index: 2;
     img {
       width: 100%;
@@ -239,7 +247,10 @@ section {
   }
   .bg-help {
     position: absolute;
-    inset: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     background: rgba(0, 0, 0, 0.7);
     z-index: 3;
   }

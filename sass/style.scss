@@ -1,3 +1,5 @@
+$max: 766px;
+
 main,
 body {
   font-family: "Lato", sans-serif;
@@ -30,7 +32,7 @@ main {
   padding: 8px;
   // border: 2px dashed white;
   border-radius: 16px;
-  left: 24px;
+  left: 8px;
   top: 180px;
   z-index: 99999;
   @media screen and (max-width: 766px) {
@@ -210,7 +212,7 @@ main {
 }
 
 .bottom-10 {
-  margin-bottom: 800px;
+  margin-bottom: 80vh;
 }
 
 .jobdesc {
@@ -226,6 +228,19 @@ main {
   padding: 32px 0;
   background: white;
   border-top: 2px dashed #444;
+  position: relative;
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
 
 section {
@@ -300,4 +315,63 @@ section {
   }
   left: 20px;
   z-index: 1;
+}
+
+.welcome {
+  position: absolute;
+  right: 32px;
+  top: 0;
+  @media screen and (max-width: $max) {
+    right: 0;
+  }
+  &.text-pop-up-top {
+    -webkit-animation: text-pop-up-top 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      infinite alternate both;
+    animation: text-pop-up-top 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+      alternate both;
+  }
+  @-webkit-keyframes text-pop-up-top {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateY(-50px);
+      transform: translateY(-50px);
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc,
+        0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc,
+        0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+  @keyframes text-pop-up-top {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateY(-50px);
+      transform: translateY(-50px);
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc,
+        0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc,
+        0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+  strong {
+    font-size: 80px;
+    display: block;
+    color: #efefef;
+    @media screen and (max-width: $max) {
+      font-size: 50px;
+    }
+  }
 }

@@ -128,6 +128,19 @@ main {
 .papua {
   padding: 82px 0;
   background: white;
+  position: relative;
+  z-index: 1;
+  &__help {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    opacity: 0.5;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
 
 .card {
@@ -269,13 +282,13 @@ section {
     background: rgba(0, 0, 0, 0.7);
     z-index: 3;
   }
-  .to-top {
-    position: relative;
-    z-index: 5;
-  }
   .content {
     padding: 16px;
   }
+}
+.to-top {
+  position: relative;
+  z-index: 20;
 }
 
 //slick

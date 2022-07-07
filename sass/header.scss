@@ -1,3 +1,10 @@
+#logo {
+  // float: left;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  margin: 16px;
+}
 header {
   padding: 30px;
   position: fixed;
@@ -7,9 +14,6 @@ header {
   right: 0;
   top: 0;
   background: none;
-  #logo {
-    float: left;
-  }
   .menu {
     font-family: "Roboto Slab";
     float: right;

@@ -22,13 +22,13 @@ main {
 .title {
   &-h1 {
     // transform: skewY(-3deg);
-    text-shadow: #bfbaff 2px 2px, #ffdef7 2px 2px;
+    // text-shadow: #bfbaff 2px 2px, #ffdef7 2px 2px;
     // text-shadow: red 4px 4px yellow 8px 8px;
     position: absolute;
     left: 5%;
     bottom: 15%;
     // color: $orange;
-    font-size: 60px;
+    // font-size: 60px;
   }
 }
 
@@ -123,7 +123,7 @@ main {
   p,
   li,
   td {
-    font-size: 21px;
+    font-size: 24px;
     color: white;
   }
   td {
@@ -153,17 +153,22 @@ main {
   // padding: 82px 0;
   z-index: 9;
   position: relative;
-  @media screen and (max-width: 766px) {
-    // background: url("../img/test.PNG");
-  }
   &__bg {
     width: 100%;
     // height: 100vh;
     overflow: hidden;
+    @media screen and (max-width: 766px) {
+      // background: url("../img/test.PNG");
+      height: 100vh;
+    }
+
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
+      @media screen and (max-width: 766px) {
+        object-fit: cover;
+      }
     }
   }
   &__bg2 {
@@ -173,6 +178,12 @@ main {
     width: 400px;
     height: 400px;
     animation: floating 5s linear 2s infinite;
+    @media screen and (max-width: 766px) {
+      right: -49px;
+      bottom: 440px;
+      width: 310px;
+      height: 310px;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -185,6 +196,7 @@ main {
     bottom: 400px;
     width: 250px;
     height: 250px;
+    animation: gray 5s linear 2s infinite;
     img {
       width: 100%;
       height: 100%;
@@ -202,6 +214,39 @@ main {
   }
 }
 
+@keyframes gray {
+  0% {
+    filter: grayscale(100%);
+  }
+  25% {
+    filter: grayscale(75%);
+  }
+  50% {
+    filter: grayscale(50%);
+  }
+  75% {
+    filter: grayscale(25%);
+  }
+  100% {
+    filter: grayscale(0%);
+  }
+}
+
+body {
+  background-color: #8d9b91;
+  margin: 0;
+  padding: 0;
+}
+svg {
+  // display: block;
+  // margin: 0 auto;
+  // width: 700px;
+  height: 300px;
+  position: absolute;
+  right: 26px;
+  bottom: 290px;
+  // animation: floating 5s linear 2s infinite;
+}
 @keyframes floating {
   0% {
     transform: translateY(0px);
@@ -211,6 +256,44 @@ main {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+#steam1 {
+  animation: puff 2s linear infinite;
+}
+
+@keyframes puff {
+  0% {
+    opacity: 0;
+    y: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+#steam2 {
+  animation: puffpuff 2.5s linear 1s infinite;
+}
+
+@keyframes puffpuff {
+  0% {
+    opacity: 0;
+    y: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50px);
   }
 }
 
@@ -382,7 +465,7 @@ main {
       height: 2px;
       background: white;
       top: 20px;
-      left: -61px;
+      left: -50px;
     }
   }
   .name {
@@ -490,9 +573,9 @@ section {
 }
 
 .welcome {
-  position: absolute;
-  left: 120px;
-  top: 72px;
+  // position: absolute;
+  // left: 120px;
+  // bottom: 72px;
   font-family: "Bowlby One", sans-serif;
   @media screen and (max-width: $max) {
     right: 0;
@@ -542,8 +625,8 @@ section {
   strong {
     font-size: 40px;
     display: block;
-    font-weight: 200 !important;
-    color: #efefef;
+    // font-weight: 200 !important;
+    color: rgba($color: #000000, $alpha: 0.85);
     @media screen and (max-width: $max) {
       font-size: 50px;
     }

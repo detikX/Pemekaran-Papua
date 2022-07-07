@@ -1,9 +1,13 @@
 #logo {
   // float: left;
   position: absolute;
-  left: 20px;
   top: 20px;
-  margin: 16px;
+  left: 20px;
+  @media screen and (max-width: 766px) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  // margin: 16px;
 }
 header {
   padding: 30px;

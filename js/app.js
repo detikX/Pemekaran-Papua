@@ -1,27 +1,26 @@
 // alert(1);
 
 $(window).scroll(function () {
+  //zoom
+  var top = $(window).scrollTop(),
+    scale = top / 2000;
+  $(".inner").css({
+    transform: "scale(" + scale + "," + scale + ")",
+    "-webkit-transform": "scale(" + scale + "," + scale + ")",
+  });
+
   var scroll = $(window).scrollTop();
   // console.log(scroll);
-
   var header = $("header");
-
-  // if (scroll > 10) {
-  //   header.addClass("stuck");
-  // } else {
-  //   header.removeClass("stuck");
-  // }
-
-  // function stuck() {
   return scroll > 20 ? header.addClass("stuck") : header.removeClass("stuck");
   // }
 });
 
-// $(".m-menu").click(() => {
-//   $(".menu").toggle();
-// });
-
 $(() => {
+  $(window).on("load", function () {
+    $(".preloader").fadeOut(10000);
+    $(".preloader").remove();
+  });
   new WOW().init();
   var mobile = $(".menu").addClass("mob");
   $(document).on("click", ".m-menu", () => {
@@ -54,6 +53,47 @@ $(() => {
   });
 });
 
+//count
+/*$(function () {
+  function isScrolledIntoView($elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemTop = $elem.offset().top;
+    var elemBottom = elemTop + $elem.height();
+    return elemBottom <= docViewBottom && elemTop >= docViewTop;
+  }
+
+  function count($this) {
+    var current = parseInt($this.html(), 10);
+    if (
+      isScrolledIntoView($this) &&
+      !$this.data("isCounting") &&
+      current < $this.data("count")
+    ) {
+      $this.html(++current);
+      $this.data("isCounting", true);
+      setTimeout(function () {
+        $this.data("isCounting", false);
+        count($this);
+      }, 1);
+    }
+  }
+
+  $(".count").each(function () {
+    $(this).data("count", parseInt($(this).html(), 10));
+    $(this).html("100000");
+    $(this).data("isCounting", false);
+  });
+
+  function startCount() {
+    $(".count").each(function () {
+      count($(this));
+    });
+  }
+  $(window).scroll(function () {
+    startCount();
+  });
+});*/
 //slick
 
 $(".autoplay").slick({

@@ -120,7 +120,7 @@ main {
 .paragraph {
   background: $blue;
   padding: 120px 0 32px;
-  min-height: 100vh;
+  min-height: 70vh;
   color: white;
   p,
   li,
@@ -206,11 +206,17 @@ main {
   }
   &__bg3 {
     position: absolute;
-    right: 100px;
-    bottom: 400px;
-    width: 250px;
-    height: 250px;
+    right: 30px;
+    bottom: 380px;
+    width: 330px;
+    height: 330px;
     animation: gray 5s linear 2s infinite;
+    @media screen and (max-width: 766px) {
+      right: 100px;
+      bottom: 400px;
+      width: 250px;
+      height: 250px;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -225,6 +231,26 @@ main {
     width: 250px;
     height: 250px;
     animation: floatingX 5s linear 2s infinite;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    @media screen and (max-width: 766px) {
+      display: none;
+    }
+  }
+
+  &__bg5 {
+    position: absolute;
+    left: 280px;
+    top: 30px;
+    width: 200px;
+    height: 200px;
+    animation: gray 5s linear 2s infinite;
+    @media screen and (max-width: 766px) {
+      display: none;
+    }
     img {
       width: 100%;
       height: 100%;

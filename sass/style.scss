@@ -744,7 +744,9 @@ section {
     // color: rgba($color: black, $alpha: 0.85);
     color: #f7ce23;
     @media screen and (max-width: $max) {
-      font-size: 50px;
+      font-size: 40px;
+      width: auto;
+      text-align: center;
     }
   }
 }

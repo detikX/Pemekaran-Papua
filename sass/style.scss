@@ -88,6 +88,9 @@ main {
   }
   &-super {
     font-size: 72px;
+    @media screen and (max-width: 766px) {
+      font-size: 52px;
+    }
   }
   &-std {
     font-size: 16px !important;
@@ -435,6 +438,10 @@ svg {
       display: inline-block;
       width: 48%;
       text-align: left;
+      @media screen and (max-width: 766px) {
+        display: block;
+        width: auto;
+      }
     }
   }
 }

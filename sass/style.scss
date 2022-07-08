@@ -6,6 +6,7 @@ $orange: #f7941f;
 main,
 body {
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   box-sizing: border-box;
   background: $blue;
 }
@@ -81,7 +82,8 @@ main {
 .font {
   &-bold {
     // font-weight: bold;
-    font-family: "Roboto Slab", serif;
+    font-family: "Montserrat", serif;
+    font-weight: 700;
     // font-family: "Bebas Neue", serif;
   }
   &-big {
@@ -718,6 +720,7 @@ section {
   // left: 120px;
   // bottom: 72px;
   font-family: "Roboto Slab", sans-serif;
+  font-weight: 700;
   @media screen and (max-width: $max) {
     right: 0;
   }

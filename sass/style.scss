@@ -763,6 +763,9 @@ section {
 .data {
   display: block;
   font-size: 24px;
+  @media screen and (max-width: 766px) {
+    display: none;
+  }
   &-title {
     display: inline-block;
     width: 350px;
@@ -861,6 +864,9 @@ section {
     right: 200px;
     top: 200px;
     cursor: pointer;
+    @media screen and (max-width: 766px) {
+      right: 100px;
+    }
   }
 }
 

@@ -957,6 +957,7 @@ section {
 
 .details-popup {
   transition: 0.3s;
+  margin-bottom: 16px;
   animation: floating 1s linear 2s infinite;
   &:hover,
   &:focus {
@@ -964,6 +965,19 @@ section {
     // opacity: 0.8;
     color: #333;
     animation: floating 1s linear 2s;
+  }
+}
+
+.selengkapnya {
+  background-color: white;
+  padding: 4px;
+  box-shadow: 0 3px 6px #bbb;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 10px;
+  transition: 0.3s;
+  &:hover {
+    background: rgb(226, 226, 226);
   }
 }
 
@@ -978,6 +992,7 @@ section {
       object-fit: contain;
     }
   }
+
   .modal1 {
     position: absolute;
     right: 200px;
@@ -1003,6 +1018,11 @@ section {
     //     }
     //   }
     // }
+  }
+  .popup {
+    &__title {
+      margin-top: 8px;
+    }
   }
 }
 

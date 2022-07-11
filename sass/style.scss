@@ -90,9 +90,9 @@ main {
     font-size: 42px;
   }
   &-super {
-    font-size: 65px;
+    font-size: 47px;
     @media screen and (max-width: 766px) {
-      font-size: 52px;
+      font-size: 50px;
     }
   }
   &-std {
@@ -443,9 +443,52 @@ svg {
     margin: 0 auto;
     text-align: center;
     &__cont {
+      // border: 1px solid white;
       display: inline-block;
       width: 48%;
+      margin: 0 8px;
       text-align: left;
+      .content {
+        border: 3px solid white;
+        position: relative;
+        // padding: 16px;
+        @media screen and (max-width: 766px) {
+          text-align: center;
+        }
+        .font-big {
+          font-size: 32px !important;
+        }
+        &__help {
+          position: absolute;
+          left: 16px;
+          right: 16px;
+          top: -4px;
+          bottom: -4px;
+          background: $blue;
+        }
+        &__help2 {
+          position: absolute;
+          left: -4px;
+          right: -4px;
+          top: 16px;
+          bottom: 16px;
+          background: $blue;
+        }
+        &__help3 {
+          position: absolute;
+          left: -4px;
+          right: -4px;
+          top: 0px;
+          bottom: 0px;
+          // width: 200px;
+          z-index: 1;
+          background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.2) 50%,
+            transparent
+          );
+        }
+      }
       h2 {
         // text-shadow:
       }
